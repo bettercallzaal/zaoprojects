@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-zao-bg text-zao-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-zao-accent/30 text-zao-text;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-zao-accent ring-offset-2 ring-offset-zao-bg;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
