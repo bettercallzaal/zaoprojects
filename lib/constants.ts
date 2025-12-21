@@ -2,7 +2,7 @@ import { NavLink, SocialLink } from "./types";
 
 export const SITE_CONFIG = {
   title: "ZAO Progress",
-  version: "v0.1 — Living Document",
+  version: "v0.2 — Infrastructure Hub",
   description:
     "ZAO is a live ecosystem of creators, communities, and tools — showing what's happening now and what's coming next.",
 } as const;

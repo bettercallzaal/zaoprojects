@@ -8,17 +8,31 @@ import { GlassCard } from "./GlassCard";
 
 interface ProjectCardProps {
   project: Project;
+  onDetailClick?: (project: Project) => void;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, onDetailClick }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const variants: ("primary" | "secondary" | "tertiary")[] = ["primary", "secondary", "tertiary"];
   return (
     <GlassCard className="p-5 sm:p-6 flex flex-col h-full">
       <header className="mb-4">
-        <h3 className="text-lg sm:text-xl font-bold font-orbitron text-zao-text mb-2 tracking-wide uppercase">
-          {project.name}
-        </h3>
+        <div className="flex justify-between items-start">
+          <h3 className="text-lg sm:text-xl font-bold font-orbitron text-zao-text mb-2 tracking-wide uppercase">
+            {project.name}
+          </h3>
+          <button
+            onClick={() => onDetailClick?.(project)}
+            className="text-[10px] uppercase font-bold text-zao-accent/70 hover:text-zao-accent transition-colors border border-zao-accent/20 px-2 py-0.5 rounded"
+          >
+            Deep Dive
+          </button>
+        </div>
+        <div className="flex gap-2 mb-2">
+          <span className="text-[9px] uppercase font-bold text-zao-muted bg-zao-card/50 px-1.5 py-0.5 rounded border border-zao-border/30">
+            {project.category}
+          </span>
+        </div>
         <p className="text-zao-muted text-sm leading-relaxed min-h-[40px]">
           {project.shortDescription}
         </p>

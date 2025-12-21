@@ -13,6 +13,7 @@ export interface Milestone {
 export interface Project {
   id: string;
   name: string;
+  category: "Ecosystem" | "Platforms" | "Community";
   shortDescription: string;
   milestones: Milestone[];
   ctas: {

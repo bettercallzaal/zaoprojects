@@ -4,12 +4,13 @@ import { Project } from "@/lib/types";
  * ZAO PROJECTS DATA
  * ==================
  * Single source of truth.
- * Now supports multiple milestones per project.
+ * Now includes categories for filtering.
  */
 export const projects: Project[] = [
   {
     id: "wavewarz",
     name: "WaveWarZ",
+    category: "Platforms",
     shortDescription:
       "Battle-style music competition platform where artists compete for community votes.",
     milestones: [
@@ -45,6 +46,7 @@ export const projects: Project[] = [
   {
     id: "zao-fractal",
     name: "ZAO Fractal",
+    category: "Ecosystem",
     shortDescription:
       "Decentralized governance and decision-making framework.",
     milestones: [
@@ -80,6 +82,7 @@ export const projects: Project[] = [
   {
     id: "zao-festivals",
     name: "ZAO Festivals",
+    category: "Community",
     shortDescription:
       "IRL and virtual festival experiences connecting artists globally.",
     milestones: [
@@ -115,6 +118,7 @@ export const projects: Project[] = [
   {
     id: "zao-cards",
     name: "ZAO Cards",
+    category: "Ecosystem",
     shortDescription:
       "Collectible artist cards unlocking exclusive content.",
     milestones: [
@@ -150,6 +154,7 @@ export const projects: Project[] = [
   {
     id: "coc-concertz",
     name: "COC Concertz",
+    category: "Community",
     shortDescription:
       "Curated concert series for emerging independent artists.",
     milestones: [
@@ -185,6 +190,7 @@ export const projects: Project[] = [
   {
     id: "zao-newsletter",
     name: "ZAO Newsletter",
+    category: "Community",
     shortDescription:
       "Weekly ecosystem updates and artist spotlights.",
     milestones: [
@@ -220,6 +226,7 @@ export const projects: Project[] = [
   {
     id: "student-loanz",
     name: "Student $LOANZ",
+    category: "Platforms",
     shortDescription:
       "Financial support for music education and equipment.",
     milestones: [
@@ -255,6 +262,7 @@ export const projects: Project[] = [
   {
     id: "zao-calendar",
     name: "ZAO Calendar",
+    category: "Ecosystem",
     shortDescription:
       "Unified event calendar for the ecosystem.",
     milestones: [
@@ -290,6 +298,7 @@ export const projects: Project[] = [
   {
     id: "lets-talk-web3",
     name: "Let's Talk About Web3",
+    category: "Community",
     shortDescription:
       "Educational series demystifying blockchain.",
     milestones: [
@@ -325,6 +334,7 @@ export const projects: Project[] = [
   {
     id: "midi-zao-nkz",
     name: "Midi-ZAO-NKZ",
+    category: "Platforms",
     shortDescription:
       "MIDI-powered creative tools for producers.",
     milestones: [
