@@ -114,9 +114,10 @@ All project data lives in a single file: **`/data/projects.ts`**
 │   ├── layout.tsx      # Root layout with header/footer
 │   └── page.tsx        # Main page (composition only)
 ├── components/
-│   ├── ProjectCard.tsx # Individual project display
-│   ├── ProgressBar.tsx # Animated progress indicator
-│   └── CTAButtons.tsx  # Call-to-action buttons
+│   ├── ProjectCard.tsx     # Main card component
+│   ├── GlassCard.tsx       # Glassmorphism container wrapper
+│   ├── TechProgressBar.tsx # Segmented high-tech progress bar
+│   └── CTAButtons.tsx      # Call-to-action buttons
 ├── data/
 │   └── projects.ts     # ⭐ SINGLE SOURCE OF TRUTH
 ├── lib/

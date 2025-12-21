@@ -10,28 +10,20 @@ const config: Config = {
     extend: {
       colors: {
         zao: {
-          bg: "#141e27",
+          bg: "#050b14", // Deep Void
+          glass: "rgba(20, 30, 39, 0.6)", // Glass Dark
           text: "#e0ddaa",
-          accent: "#49f3c3",
+          accent: "#49f3c3", // Neon Teal
           "accent-hover": "#3dd4a8",
+          secondary: "#00f0ff", // Cyber Blue
           muted: "#8a9a8a",
           card: "#1a2832",
           border: "#2a3842",
         },
       },
       fontFamily: {
-        sans: [
-          "Geist",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "sans-serif",
-        ],
+        orbitron: ["Orbitron", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
       },
       animation: {
         "progress-fill": "progressFill 1s ease-out forwards",
