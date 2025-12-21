@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { SITE_CONFIG, NAV_LINKS, SOCIAL_LINKS, FOOTER_MISSION } from "@/lib/constants";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
@@ -101,6 +102,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
