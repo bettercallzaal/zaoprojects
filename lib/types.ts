@@ -4,13 +4,17 @@ export interface CTA {
   helperText: string;
 }
 
+export interface Milestone {
+  title: string;
+  timeline: string;
+  progress: number;
+}
+
 export interface Project {
   id: string;
   name: string;
   shortDescription: string;
-  nextMilestone: string;
-  nextTodo: string;
-  progress: number;
+  milestones: Milestone[];
   ctas: {
     primary: CTA;
     secondary: CTA;

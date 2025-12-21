@@ -3,35 +3,42 @@ import { Project } from "@/lib/types";
 /**
  * ZAO PROJECTS DATA
  * ==================
- * This is the single source of truth for all project data.
- *
- * To update progress, milestones, or CTAs:
- * Simply edit the relevant project object below.
- *
- * Progress semantics:
- * - 0-100% represents progress toward the CURRENT milestone
- * - 100% means the current milestone is complete
- * - After completion, reset progress and update nextMilestone
+ * Single source of truth.
+ * Now supports multiple milestones per project.
  */
 export const projects: Project[] = [
   {
     id: "wavewarz",
     name: "WaveWarZ",
     shortDescription:
-      "Battle-style music competition platform where artists compete for community votes and prizes.",
-    nextMilestone: "Launch Season 2 with expanded voting mechanics",
-    nextTodo: "Finalize bracket seeding algorithm and test voting flow",
-    progress: 65,
+      "Battle-style music competition platform where artists compete for community votes.",
+    milestones: [
+      {
+        title: "Bracket Seeding Algorithm",
+        timeline: "2 Weeks",
+        progress: 85,
+      },
+      {
+        title: "Community Voting Mechanics",
+        timeline: "1 Month",
+        progress: 60,
+      },
+      {
+        title: "Season 2 Launch",
+        timeline: "Q1 2025",
+        progress: 20,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Enter the arena",
+        label: "Enter Arena",
         href: "https://www.wavyfans.net/wavewarz",
-        helperText: "Compete or vote in live music battles",
+        helperText: "Compete in battles",
       },
       secondary: {
-        label: "Learn more",
+        label: "About",
         href: "https://thezao.com",
-        helperText: "Discover how WaveWarZ works",
+        helperText: "How it works",
       },
     },
   },
@@ -39,20 +46,34 @@ export const projects: Project[] = [
     id: "zao-fractal",
     name: "ZAO Fractal",
     shortDescription:
-      "Decentralized governance and decision-making framework for the ZAO ecosystem.",
-    nextMilestone: "Deploy governance dashboard v1",
-    nextTodo: "Complete smart contract audit review",
-    progress: 40,
+      "Decentralized governance and decision-making framework.",
+    milestones: [
+      {
+        title: "Governance Dashboard v1",
+        timeline: "3 Weeks",
+        progress: 75,
+      },
+      {
+        title: "Smart Contract Audit",
+        timeline: "1 Month",
+        progress: 40,
+      },
+      {
+        title: "Community DAO Vote",
+        timeline: "Q2 2025",
+        progress: 0,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Join governance",
+        label: "Governance",
         href: "https://nexus.thezao.com",
-        helperText: "Participate in ecosystem decisions",
+        helperText: "Vote on proposals",
       },
       secondary: {
-        label: "Read the docs",
+        label: "Docs",
         href: "https://thezao.com",
-        helperText: "Understand the fractal model",
+        helperText: "Read the whitepaper",
       },
     },
   },
@@ -60,20 +81,34 @@ export const projects: Project[] = [
     id: "zao-festivals",
     name: "ZAO Festivals",
     shortDescription:
-      "IRL and virtual festival experiences connecting artists with global audiences.",
-    nextMilestone: "Announce Q1 2025 festival lineup",
-    nextTodo: "Confirm venue partnerships and artist roster",
-    progress: 55,
+      "IRL and virtual festival experiences connecting artists globally.",
+    milestones: [
+      {
+        title: "Venue Partnerships",
+        timeline: "Ongoing",
+        progress: 90,
+      },
+      {
+        title: "Artist Lineup curation",
+        timeline: "Feb 2025",
+        progress: 50,
+      },
+      {
+        title: "Ticket Sales Launch",
+        timeline: "Mar 2025",
+        progress: 10,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Get notified",
+        label: "Get Updates",
         href: "https://paragraph.xyz/@thezao",
-        helperText: "Be first to know about upcoming events",
+        helperText: "Join the list",
       },
       secondary: {
-        label: "Past events",
+        label: "Archives",
         href: "https://thezao.com",
-        helperText: "See what we've done before",
+        helperText: "Past events",
       },
     },
   },
@@ -81,20 +116,34 @@ export const projects: Project[] = [
     id: "zao-cards",
     name: "ZAO Cards",
     shortDescription:
-      "Collectible artist cards that unlock exclusive content and community access.",
-    nextMilestone: "Ship public minting interface",
-    nextTodo: "Integrate payment processing and metadata storage",
-    progress: 70,
+      "Collectible artist cards unlocking exclusive content.",
+    milestones: [
+      {
+        title: "Metadata Standard",
+        timeline: "Done",
+        progress: 100,
+      },
+      {
+        title: "Public Minting UI",
+        timeline: "2 Weeks",
+        progress: 65,
+      },
+      {
+        title: "Marketplace Integration",
+        timeline: "Q2 2025",
+        progress: 25,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Explore cards",
+        label: "Collect",
         href: "https://zao.cards",
-        helperText: "Browse and collect artist cards",
+        helperText: "Browse cards",
       },
       secondary: {
-        label: "For artists",
+        label: "Create",
         href: "https://nexus.thezao.com",
-        helperText: "Create your own card collection",
+        helperText: "For artists",
       },
     },
   },
@@ -102,20 +151,34 @@ export const projects: Project[] = [
     id: "coc-concertz",
     name: "COC Concertz",
     shortDescription:
-      "Curated concert series showcasing emerging independent artists.",
-    nextMilestone: "Book 5 shows for Spring 2025 season",
-    nextTodo: "Finalize venue contracts in 3 target cities",
-    progress: 35,
+      "Curated concert series for emerging independent artists.",
+    milestones: [
+      {
+        title: "Spring Season Booking",
+        timeline: "1 Month",
+        progress: 40,
+      },
+      {
+        title: "City Selection",
+        timeline: "2 Weeks",
+        progress: 80,
+      },
+      {
+        title: "Promo Campaign",
+        timeline: "Mar 2025",
+        progress: 15,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Apply to perform",
+        label: "Apply",
         href: "https://nexus.thezao.com",
-        helperText: "Submit your artist application",
+        helperText: "Perform live",
       },
       secondary: {
-        label: "Upcoming shows",
+        label: "Calendar",
         href: "https://thezao.com",
-        helperText: "See the concert calendar",
+        helperText: "Upcoming shows",
       },
     },
   },
@@ -123,20 +186,34 @@ export const projects: Project[] = [
     id: "zao-newsletter",
     name: "ZAO Newsletter",
     shortDescription:
-      "Weekly updates on ecosystem progress, artist spotlights, and industry insights.",
-    nextMilestone: "Reach 1,000 active subscribers",
-    nextTodo: "Publish next edition with project updates",
-    progress: 80,
+      "Weekly ecosystem updates and artist spotlights.",
+    milestones: [
+      {
+        title: "Subscriber Growth",
+        timeline: "Continuous",
+        progress: 78,
+      },
+      {
+        title: "Content Automation",
+        timeline: "1 Week",
+        progress: 90,
+      },
+      {
+        title: "Sponsorship Deck",
+        timeline: "Q1 2025",
+        progress: 30,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Subscribe now",
+        label: "Read",
         href: "https://paragraph.xyz/@thezao",
-        helperText: "Get updates in your inbox",
+        helperText: "Latest issue",
       },
       secondary: {
-        label: "Read archives",
+        label: "Subscribe",
         href: "https://paragraph.xyz/@thezao",
-        helperText: "Catch up on past editions",
+        helperText: "Get updates",
       },
     },
   },
@@ -144,20 +221,34 @@ export const projects: Project[] = [
     id: "student-loanz",
     name: "Student $LOANZ",
     shortDescription:
-      "Financial support program helping music students access education and equipment.",
-    nextMilestone: "Launch application portal for Spring cohort",
-    nextTodo: "Build eligibility checker and application form",
-    progress: 45,
+      "Financial support for music education and equipment.",
+    milestones: [
+      {
+        title: "Eligibility Checker",
+        timeline: "3 Weeks",
+        progress: 55,
+      },
+      {
+        title: "Application Portal",
+        timeline: "1 Month",
+        progress: 40,
+      },
+      {
+        title: "Fundraising Round",
+        timeline: "Q2 2025",
+        progress: 10,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Apply for support",
+        label: "Apply",
         href: "https://nexus.thezao.com",
-        helperText: "Check your eligibility",
+        helperText: "Get funded",
       },
       secondary: {
-        label: "Donate",
+        label: "Support",
         href: "https://thezao.com",
-        helperText: "Support the next generation",
+        helperText: "Donate",
       },
     },
   },
@@ -165,20 +256,34 @@ export const projects: Project[] = [
     id: "zao-calendar",
     name: "ZAO Calendar",
     shortDescription:
-      "Unified event calendar for all ZAO ecosystem activities and community meetups.",
-    nextMilestone: "Integrate with major calendar platforms",
-    nextTodo: "Add Google Calendar and iCal export functionality",
-    progress: 50,
+      "Unified event calendar for the ecosystem.",
+    milestones: [
+      {
+        title: "Google Cal Sync",
+        timeline: "1 Week",
+        progress: 85,
+      },
+      {
+        title: "Event Submission Form",
+        timeline: "2 Weeks",
+        progress: 60,
+      },
+      {
+        title: "Mobile Widget",
+        timeline: "1 Month",
+        progress: 20,
+      },
+    ],
     ctas: {
       primary: {
-        label: "View calendar",
+        label: "View",
         href: "https://nexus.thezao.com",
-        helperText: "See all upcoming events",
+        helperText: "All events",
       },
       secondary: {
-        label: "Submit event",
+        label: "Submit",
         href: "https://nexus.thezao.com",
-        helperText: "Add your community event",
+        helperText: "Add event",
       },
     },
   },
@@ -186,20 +291,34 @@ export const projects: Project[] = [
     id: "lets-talk-web3",
     name: "Let's Talk About Web3",
     shortDescription:
-      "Educational content series demystifying blockchain and web3 for musicians.",
-    nextMilestone: "Release Episode 10 with guest artist interview",
-    nextTodo: "Edit and publish next episode",
-    progress: 60,
+      "Educational series demystifying blockchain.",
+    milestones: [
+      {
+        title: "Episode 10 Production",
+        timeline: "This Week",
+        progress: 95,
+      },
+      {
+        title: "Guest Booking",
+        timeline: "Ongoing",
+        progress: 70,
+      },
+      {
+        title: "Interactive Quizzes",
+        timeline: "2 Months",
+        progress: 10,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Watch episodes",
+        label: "Watch",
         href: "https://thezao.com",
-        helperText: "Learn at your own pace",
+        helperText: "Start learning",
       },
       secondary: {
-        label: "Suggest topics",
+        label: "Suggest",
         href: "https://nexus.thezao.com",
-        helperText: "Tell us what to cover next",
+        helperText: "Topic ideas",
       },
     },
   },
@@ -207,20 +326,34 @@ export const projects: Project[] = [
     id: "midi-zao-nkz",
     name: "Midi-ZAO-NKZ",
     shortDescription:
-      "MIDI-powered creative tools and instruments for music production.",
-    nextMilestone: "Beta release of first instrument plugin",
-    nextTodo: "Complete cross-platform compatibility testing",
-    progress: 30,
+      "MIDI-powered creative tools for producers.",
+    milestones: [
+      {
+        title: "Core Audio Engine",
+        timeline: "1 Month",
+        progress: 40,
+      },
+      {
+        title: "VST3 Wrapper",
+        timeline: "2 Months",
+        progress: 20,
+      },
+      {
+        title: "UI Implementation",
+        timeline: "Q2 2025",
+        progress: 5,
+      },
+    ],
     ctas: {
       primary: {
-        label: "Join beta",
+        label: "Beta Access",
         href: "https://nexus.thezao.com",
-        helperText: "Test early builds",
+        helperText: "Try it out",
       },
       secondary: {
-        label: "Learn more",
+        label: "Learn",
         href: "https://thezao.com",
-        helperText: "See what we're building",
+        helperText: "More info",
       },
     },
   },

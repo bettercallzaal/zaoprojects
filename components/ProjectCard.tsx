@@ -19,35 +19,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </p>
       </header>
 
-      <div className="flex-1 flex flex-col justify-end space-y-5">
+      <div className="flex-1 flex flex-col justify-end space-y-6">
 
-        {/* Progress System */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-end text-xs uppercase tracking-wider font-semibold">
-            <span className="text-zao-accent">Progress</span>
-            <span className="text-zao-secondary font-orbitron">{project.progress}%</span>
-          </div>
-          <TechProgressBar progress={project.progress} />
-        </div>
-
-        {/* Info Grid */}
-        <div className="grid grid-cols-1 gap-3 p-3 rounded-lg bg-zao-bg/30 border border-zao-border/30">
-          <div>
-            <span className="block text-[10px] uppercase tracking-widest text-zao-muted mb-1">
-              Next Milestone
-            </span>
-            <p className="text-zao-text text-xs sm:text-sm font-medium">
-              {project.nextMilestone}
-            </p>
-          </div>
-          <div className="pt-2 border-t border-zao-border/30">
-            <span className="block text-[10px] uppercase tracking-widest text-zao-muted mb-1">
-              Focus
-            </span>
-            <p className="text-zao-text text-xs sm:text-sm text-zao-muted/90">
-              {project.nextTodo}
-            </p>
-          </div>
+        {/* Milestones List */}
+        <div className="space-y-4">
+          {project.milestones.map((milestone, index) => (
+            <div key={index} className="space-y-1.5">
+              <div className="flex justify-between items-end text-[10px] uppercase tracking-wider font-semibold">
+                <span className="text-zao-text/80">{milestone.title}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-zao-muted">{milestone.timeline}</span>
+                  <span className="text-zao-secondary font-orbitron">{milestone.progress}%</span>
+                </div>
+              </div>
+              <TechProgressBar progress={milestone.progress} totalSegments={10} />
+            </div>
+          ))}
         </div>
 
         <CTAButtons primary={project.ctas.primary} secondary={project.ctas.secondary} />
