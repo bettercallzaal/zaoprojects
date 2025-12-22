@@ -20,7 +20,7 @@ export default async function EmbedPage({
 }) {
     let projects = await fetchProjects();
 
-    const limit = searchParams.limit ? parseInt(searchParams.limit) : 3;
+    const limit = searchParams.limit ? parseInt(searchParams.limit) : 20; // Default to 20 (All available)
     const category = searchParams.category || "All";
     const cols = searchParams.cols ? parseInt(searchParams.cols) : 1;
     const showBranding = searchParams.branding !== "false";
@@ -67,19 +67,42 @@ export default async function EmbedPage({
             padding: 0;
             cursor: default;
             transition: background 0.3s ease;
+            overflow-x: hidden;
         }
+        
+        /* Subtle Cyber Background Patterns */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(224, 221, 170, 0.03) 0%, transparent 50%),
+                linear-gradient(rgba(20, 30, 39, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 30, 39, 0.1) 1px, transparent 1px);
+            background-size: 100% 100%, 20px 20px, 20px 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
         .text-zao-accent { color: var(--zao-primary) !important; }
         .bg-zao-accent { background-color: var(--zao-primary) !important; }
         .border-zao-accent { border-color: var(--zao-primary) !important; }
         
         .glass-card { 
-            background: rgba(255, 255, 255, 0.03) !important; 
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.02) !important; 
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
         }
         
-        [class*="bg-zao-accent"] { background-color: var(--zao-primary) !important; }
+        [class*="bg-zao-accent"] { 
+            background-color: var(--zao-primary) !important; 
+            box-shadow: 0 0 15px var(--zao-primary);
+        }
 
         /* Modal inside iframe adjustments */
         .fixed.inset-0 { 

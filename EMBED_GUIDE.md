@@ -12,7 +12,7 @@ Copy and paste this code into your Webflow/HTML embed. This template follows mod
 <div id="zao-portal-container" style="position: relative; width: 100%;">
   <iframe 
     id="zao-iframe"
-    src="https://zaoprojects.vercel.app/embed?limit=3&theme=zao" 
+    src="https://zaoprojects.vercel.app/embed?theme=zao" 
     title="ZAO Ecosystem Project Progress Dashboard"
     width="100%" 
     frameborder="0" 
@@ -59,7 +59,7 @@ You can pass any color without the `#` symbol.
 
 | Parameter | Default | Example | Description |
 | :--- | :--- | :--- | :--- |
-| `limit` | `3` | `&limit=1` | Number of project cards to display. |
+| `limit` | `20` | `&limit=3` | Number of projects (defaults to 20/All). |
 | `cols` | `1` | `&cols=2` | Grid columns for wide layout areas. |
 | `category` | `All` | `&category=Platforms` | Show only one sector of the fractal. |
 | `branding` | `true` | `&branding=false` | Hides the "Powered by ZAO" footer. |

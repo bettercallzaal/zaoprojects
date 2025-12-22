@@ -28,6 +28,7 @@ export function EmbedDashboard({ projects, cols, showBranding, primaryColor, sho
                             project={project}
                             onDetailClick={(p) => setSelectedProject(p)}
                             showDeepDive={showDeepDive}
+                            isEmbed={true}
                         />
                     </article>
                 ))}
