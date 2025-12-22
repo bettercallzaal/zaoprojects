@@ -16,7 +16,7 @@ export async function fetchProjects(): Promise<Project[]> {
 
     try {
         const response = await fetch(GOOGLE_SHEET_CSV_URL, {
-            next: { revalidate: 0 } // Bypassing cache for testing
+            next: { revalidate: 1 } // Fresh enough for testing, avoids build errors
         });
 
         console.log("📡 Fetch Response Status:", response.status);

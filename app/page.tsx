@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { fetchProjects } from "@/lib/projectsLoader";
 import Dashboard from "@/components/Dashboard";
 
