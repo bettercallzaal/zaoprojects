@@ -40,24 +40,6 @@ export function EmbedDashboard({ projects, cols, showBranding, primaryColor, sho
                 </div>
             )}
 
-            {showBranding && (
-                <footer className="mt-8 flex justify-between items-center text-[10px] uppercase tracking-widest text-zao-muted/70 font-bold px-2">
-                    <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-zao-accent animate-pulse" style={{ backgroundColor: primaryColor }} />
-                        ZAO Fractal Nodes
-                    </span>
-                    <a
-                        href="https://zaoprojects.vercel.app"
-                        target="_top"
-                        rel="noopener noreferrer"
-                        className="hover:text-zao-accent transition-colors flex items-center gap-1"
-                        style={{ color: primaryColor }}
-                    >
-                        FULL HUB <span className="text-[8px]">&rarr;</span>
-                    </a>
-                </footer>
-            )}
-
             {selectedProject && (
                 <ProjectModal
                     project={selectedProject}

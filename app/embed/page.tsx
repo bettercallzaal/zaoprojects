@@ -27,14 +27,14 @@ export default async function EmbedPage({
     const showDeepDive = searchParams.deepdive === "true"; // Default to false now
 
     // Theme logic
-    let primaryColor = "#49f3c3"; // Default Teal
-    let accentColor = "#00f0ff";  // Default Cyan
-    let bgColor = "transparent";
+    let primaryColor = "#e0ddaa"; // Default to ZAO Yellow for branding consistency
+    let accentColor = "#141e27";  // Default to Dark Blue
+    let bgColor = "#050b14";      // Default to Deep Space Dark
 
     if (searchParams.theme === "zao") {
         primaryColor = "#e0ddaa"; // Yellow
         accentColor = "#141e27";  // Dark Blue
-        bgColor = "#141e27";      // Dark Blue Background
+        bgColor = "#141e27";      // Matches the ZAO site background
     }
 
     // Override with custom hex if provided
@@ -67,26 +67,9 @@ export default async function EmbedPage({
             padding: 0;
             cursor: default;
             transition: background 0.3s ease;
-            overflow-x: hidden;
+            overflow: hidden;
         }
         
-        /* Subtle Cyber Background Patterns */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 50% 50%, rgba(224, 221, 170, 0.03) 0%, transparent 50%),
-                linear-gradient(rgba(20, 30, 39, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(20, 30, 39, 0.1) 1px, transparent 1px);
-            background-size: 100% 100%, 20px 20px, 20px 20px;
-            pointer-events: none;
-            z-index: -1;
-        }
-
         .text-zao-accent { color: var(--zao-primary) !important; }
         .bg-zao-accent { background-color: var(--zao-primary) !important; }
         .border-zao-accent { border-color: var(--zao-primary) !important; }
