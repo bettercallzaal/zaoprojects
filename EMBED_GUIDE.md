@@ -63,6 +63,7 @@ You can pass any color without the `#` symbol.
 | `cols` | `1` | `&cols=2` | Grid columns for wide layout areas. |
 | `category` | `All` | `&category=Platforms` | Show only one sector of the fractal. |
 | `branding` | `true` | `&branding=false` | Hides the "Powered by ZAO" footer. |
+| `bg` | `none` | `&bg=000000` | Custom background color (use `none` for transparent). |
 
 ---
 

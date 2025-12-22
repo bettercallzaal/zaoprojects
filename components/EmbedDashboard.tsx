@@ -45,12 +45,12 @@ export function EmbedDashboard({ projects, cols, showBranding, primaryColor }: E
                     </span>
                     <a
                         href="https://zaoprojects.vercel.app"
-                        target="_blank"
+                        target="_top"
                         rel="noopener noreferrer"
                         className="hover:text-zao-accent transition-colors flex items-center gap-1"
                         style={{ color: primaryColor }}
                     >
-                        Explore All <span className="text-[8px]">&rarr;</span>
+                        FULL HUB <span className="text-[8px]">&rarr;</span>
                     </a>
                 </footer>
             )}
