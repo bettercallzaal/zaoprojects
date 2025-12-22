@@ -11,9 +11,10 @@ interface EmbedDashboardProps {
     cols: number;
     showBranding: boolean;
     primaryColor: string;
+    showDeepDive?: boolean;
 }
 
-export function EmbedDashboard({ projects, cols, showBranding, primaryColor }: EmbedDashboardProps) {
+export function EmbedDashboard({ projects, cols, showBranding, primaryColor, showDeepDive = false }: EmbedDashboardProps) {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
@@ -26,6 +27,7 @@ export function EmbedDashboard({ projects, cols, showBranding, primaryColor }: E
                         <ProjectCard
                             project={project}
                             onDetailClick={(p) => setSelectedProject(p)}
+                            showDeepDive={showDeepDive}
                         />
                     </article>
                 ))}

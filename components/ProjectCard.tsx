@@ -9,9 +9,10 @@ import { GlassCard } from "./GlassCard";
 interface ProjectCardProps {
   project: Project;
   onDetailClick?: (project: Project) => void;
+  showDeepDive?: boolean;
 }
 
-export default function ProjectCard({ project, onDetailClick }: ProjectCardProps) {
+export default function ProjectCard({ project, onDetailClick, showDeepDive = true }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const variants: ("primary" | "secondary" | "tertiary")[] = ["primary", "secondary", "tertiary"];
   return (
@@ -21,12 +22,14 @@ export default function ProjectCard({ project, onDetailClick }: ProjectCardProps
           <h3 className="text-lg sm:text-xl font-bold font-orbitron text-zao-text mb-2 tracking-wide uppercase">
             {project.name}
           </h3>
-          <button
-            onClick={() => onDetailClick?.(project)}
-            className="text-[10px] uppercase font-bold text-zao-accent/70 hover:text-zao-accent transition-colors border border-zao-accent/20 px-2 py-0.5 rounded"
-          >
-            Deep Dive
-          </button>
+          {showDeepDive && (
+            <button
+              onClick={() => onDetailClick?.(project)}
+              className="text-[10px] uppercase font-bold text-zao-accent/70 hover:text-zao-accent transition-colors border border-zao-accent/20 px-2 py-0.5 rounded"
+            >
+              Deep Dive
+            </button>
+          )}
         </div>
         <div className="flex gap-2 mb-2">
           <span className="text-[9px] uppercase font-bold text-zao-muted bg-zao-card/50 px-1.5 py-0.5 rounded border border-zao-border/30">

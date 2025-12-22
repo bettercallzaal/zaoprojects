@@ -15,6 +15,7 @@ export default async function EmbedPage({
         branding?: string;
         theme?: string;
         bg?: string;
+        deepdive?: string;
     };
 }) {
     let projects = await fetchProjects();
@@ -23,6 +24,7 @@ export default async function EmbedPage({
     const category = searchParams.category || "All";
     const cols = searchParams.cols ? parseInt(searchParams.cols) : 1;
     const showBranding = searchParams.branding !== "false";
+    const showDeepDive = searchParams.deepdive === "true"; // Default to false now
 
     // Theme logic
     let primaryColor = "#49f3c3"; // Default Teal
@@ -91,6 +93,7 @@ export default async function EmbedPage({
                 cols={cols}
                 showBranding={showBranding}
                 primaryColor={primaryColor}
+                showDeepDive={showDeepDive}
             />
         </>
     );

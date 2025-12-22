@@ -64,6 +64,7 @@ You can pass any color without the `#` symbol.
 | `category` | `All` | `&category=Platforms` | Show only one sector of the fractal. |
 | `branding` | `true` | `&branding=false` | Hides the "Powered by ZAO" footer. |
 | `bg` | `none` | `&bg=000000` | Custom background color (use `none` for transparent). |
+| `deepdive` | `false` | `&deepdive=true` | Shows the "Deep Dive" button on project cards. |
 
 ---
 
