@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react";
 import ProjectCard from "@/components/ProjectCard";
-import { ActivityFeed } from "@/components/ActivityFeed";
 import { ProjectModal } from "@/components/ProjectModal";
 import { Project } from "@/lib/types";
 
@@ -36,10 +35,10 @@ export default function Dashboard({ initialProjects }: DashboardProps) {
                     </p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+                <div className="flex flex-col gap-8 items-start">
 
                     {/* Main Content Area */}
-                    <div className="flex-1 space-y-8 w-full">
+                    <div className="flex-1 space-y-8 w-full max-w-5xl mx-auto">
 
                         {/* Filter & Search Bar */}
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-6 border-b border-zao-border/30">
@@ -91,11 +90,6 @@ export default function Dashboard({ initialProjects }: DashboardProps) {
                             )}
                         </div>
                     </div>
-
-                    {/* Sidebar Area */}
-                    <aside className="w-full lg:w-80 shrink-0 sticky top-24 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto pr-2 custom-scrollbar">
-                        <ActivityFeed />
-                    </aside>
 
                 </div>
             </div>
