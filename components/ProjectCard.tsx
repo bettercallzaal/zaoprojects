@@ -118,7 +118,7 @@ export default function ProjectCard({
         </div>
 
         <div className={isEmbed ? 'pt-1' : 'pt-2'}>
-          <CTAButtons primary={project.ctas.primary} secondary={project.ctas.secondary} />
+          <CTAButtons primary={project.ctas.primary} secondary={project.ctas.secondary} isEmbed={isEmbed} />
         </div>
       </div>
     </GlassCard>

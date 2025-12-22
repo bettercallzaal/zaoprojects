@@ -28,19 +28,19 @@ export function TechProgressBar({
 
     const variantStyles = {
         primary: {
-            active: "bg-zao-accent shadow-[0_0_8px_#49f3c3]",
+            active: "bg-zao-accent shadow-[0_0_8px_var(--zao-primary)]",
             inactive: "bg-zao-card/50",
-            glow: "#49f3c3",
+            glow: "var(--zao-primary)",
         },
         secondary: {
-            active: "bg-zao-secondary shadow-[0_0_8px_#00f0ff]",
+            active: "bg-zao-secondary shadow-[0_0_8px_var(--zao-secondary)]",
             inactive: "bg-zao-card/40",
-            glow: "#00f0ff",
+            glow: "var(--zao-secondary)",
         },
         tertiary: {
-            active: "bg-zao-muted shadow-[0_0_8px_#8a9a8a]",
+            active: "bg-zao-muted shadow-[0_0_8px_var(--zao-muted)]",
             inactive: "bg-zao-card/30",
-            glow: "#8a9a8a",
+            glow: "var(--zao-muted)",
         },
     };
 
