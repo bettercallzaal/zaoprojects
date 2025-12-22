@@ -7,15 +7,29 @@ You can now embed your ZAO project data into any website (Webflow, Framer, WordP
 ## 1. No-Code Iframe (Recommended)
 The easiest way to show your top projects. Just copy and paste this code into an "Embed" or "HTML" block in Webflow.
 
-### Simple Widget (Top 3 Projects)
+### Simple Widget (Auto-Resizing)
 ```html
-<iframe 
-  src="https://zaoprojects.vercel.app/embed?limit=3" 
-  width="100%" 
-  height="600px" 
-  frameborder="0" 
-  style="background: transparent;"
-></iframe>
+<div id="zao-embed-container">
+  <iframe 
+    id="zao-iframe"
+    src="https://zaoprogress.vercel.app/embed?limit=3" 
+    width="100%" 
+    frameborder="0" 
+    scrolling="no"
+    style="background: transparent; min-height: 400px;"
+  ></iframe>
+</div>
+
+<script>
+  window.addEventListener('message', function(e) {
+    if (e.data.type === 'resize') {
+      const iframe = document.getElementById('zao-iframe');
+      if (iframe) {
+        iframe.style.height = e.data.height + 'px';
+      }
+    }
+  }, false);
+</script>
 ```
 
 ### Advanced Options (Query Params)

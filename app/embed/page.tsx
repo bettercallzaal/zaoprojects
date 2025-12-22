@@ -1,5 +1,6 @@
 import { fetchProjects } from "@/lib/projectsLoader";
 import ProjectCard from "@/components/ProjectCard";
+import { ResizeHandler } from "@/components/ResizeHandler";
 
 export const dynamic = 'force-dynamic';
 
@@ -21,16 +22,23 @@ export default async function EmbedPage({
     projects = projects.slice(0, limit);
 
     return (
-        <div className="p-4 bg-transparent min-h-screen">
+        <div className="p-4 relative">
+            <ResizeHandler />
             <style dangerouslySetInnerHTML={{
                 __html: `
-        body { background: transparent !important; }
-        .glass-card { background: rgba(5, 11, 20, 0.8) !important; }
+        /* Force transparency on root elements */
+        html, body { 
+            background: transparent !important; 
+            background-color: transparent !important;
+        }
+        .glass-card { 
+            background: rgba(5, 11, 20, 0.8) !important; 
+            backdrop-filter: blur(8px);
+        }
       `}} />
             <div className={`grid gap-6 grid-cols-1 ${cols > 1 ? `md:grid-cols-${cols}` : ''}`}>
                 {projects.map((project) => (
                     <div key={project.id} className="w-full">
-                        {/* Using a simplified card would be better, but we'll use ProjectCard for consistency */}
                         <ProjectCard project={project} />
                     </div>
                 ))}
@@ -42,7 +50,7 @@ export default async function EmbedPage({
                 </div>
             )}
 
-            <div className="mt-4 flex justify-between items-center text-[10px] uppercase tracking-widest text-zao-muted/50 font-bold px-2">
+            <div className="mt-6 flex justify-between items-center text-[10px] uppercase tracking-widest text-zao-muted/70 font-bold px-2">
                 <span>Powered by ZAO Fractal</span>
                 <a href="https://zaoprogress.vercel.app" target="_blank" className="hover:text-zao-accent transition-colors">
                     View All &rarr;
