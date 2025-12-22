@@ -12,7 +12,7 @@ Copy and paste this code into your Webflow/HTML embed. This template follows mod
 <div id="zao-portal-container" style="position: relative; width: 100%;">
   <iframe 
     id="zao-iframe"
-    src="https://zaoprogress.vercel.app/embed?limit=3&theme=zao" 
+    src="https://zaoprojects.vercel.app/embed?limit=3&theme=zao" 
     title="ZAO Ecosystem Project Progress Dashboard"
     width="100%" 
     frameborder="0" 
@@ -78,4 +78,4 @@ You can pass any color without the `#` symbol.
 
 ## 👨‍💻 JSON API (Advanced)
 If you want to build a custom list using **Webflow CMS** or **Wized**, use our endpoint:
-`https://zaoprogress.vercel.app/api/projects?theme=zao`
+`https://zaoprojects.vercel.app/api/projects?theme=zao`
