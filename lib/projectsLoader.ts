@@ -39,28 +39,19 @@ export async function fetchProjects(): Promise<Project[]> {
                     const parsedProjects: Project[] = results.data
                         .filter((row: any) => row.id || row.name) // Ensure row isn't garbage
                         .map((row: any) => {
-                            // Reconstruct milestones array
-                            const milestones: Milestone[] = [];
-                            for (let i = 1; i <= 3; i++) {
-                                const title = row[`milestone${i}_title`];
-                                const timeline = row[`milestone${i}_timeline`];
-                                const progress = parseInt(row[`milestone${i}_progress`]);
-
-                                if (title) {
-                                    milestones.push({
-                                        title,
-                                        timeline: timeline || "TBD",
-                                        progress: isNaN(progress) ? 0 : progress
-                                    });
-                                }
-                            }
+                            // Construct milestone object
+                            const milestone: Milestone = {
+                                title: row.milestone_title || row.milestone1_title || "Main Goal",
+                                timeline: row.milestone_timeline || row.milestone1_timeline || "TBD",
+                                progress: parseInt(row.milestone_progress || row.milestone1_progress) || 0
+                            };
 
                             return {
                                 id: row.id || row.name?.toLowerCase().replace(/\s+/g, '-'),
                                 name: row.name,
                                 category: (row.category as any) || "Ecosystem",
                                 shortDescription: row.description || "",
-                                milestones: milestones,
+                                milestone: milestone,
                                 ctas: {
                                     primary: {
                                         label: row.cta_primary_label || "Learn More",

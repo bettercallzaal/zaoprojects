@@ -67,18 +67,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                         <div className="space-y-6">
                             <section>
-                                <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-4 font-bold">Active Tracks</h4>
+                                <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-4 font-bold">Main Goal</h4>
                                 <div className="space-y-6">
-                                    {project.milestones.map((milestone, index) => (
-                                        <div key={index} className="space-y-2">
-                                            <div className="flex justify-between items-end text-[10px] uppercase tracking-wider font-semibold">
-                                                <span className="text-zao-text">{milestone.title}</span>
-                                                <span className="text-zao-secondary font-orbitron">{milestone.progress}%</span>
-                                            </div>
-                                            <TechProgressBar progress={milestone.progress} totalSegments={15} variant={index === 0 ? "primary" : index === 1 ? "secondary" : "tertiary"} />
-                                            <p className="text-[10px] text-zao-muted italic">Timeline: {milestone.timeline}</p>
+                                    <div className="space-y-2">
+                                        <div className="flex justify-between items-end text-[10px] uppercase tracking-wider font-semibold">
+                                            <span className="text-zao-text">{project.milestone.title}</span>
+                                            <span className="text-zao-secondary font-orbitron">{project.milestone.progress}%</span>
                                         </div>
-                                    ))}
+                                        <TechProgressBar progress={project.milestone.progress} totalSegments={15} variant="primary" />
+                                        <p className="text-[10px] text-zao-muted italic">Timeline: {project.milestone.timeline}</p>
+                                    </div>
                                 </div>
                             </section>
                         </div>

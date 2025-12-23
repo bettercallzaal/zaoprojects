@@ -11,19 +11,15 @@ Create a new Google Sheet with the following columns in the first row (Header):
 | `name` | Project Name | `WaveWarZ` |
 | `category` | `Ecosystem` \| `Platforms` \| `Community` | `Platforms` |
 | `description` | Short blurb | `Battle-style music platform...` |
-| `milestone1_title` | Name of first task | `Seeding Algorithm` |
-| `milestone1_timeline` | Expected date | `2 Weeks` |
-| `milestone1_progress` | Number 0-100 | `85` |
-| `milestone2_title` | Name of second task | `Voting Mechanics` |
-| `milestone2_timeline` | Expected date | `1 Month` |
-| `milestone2_progress` | Number 0-100 | `40` |
-| `milestone3_title` | Name of third task | `Season 2 Launch` |
-| `milestone3_timeline` | Expected date | `Q1 2025` |
-| `milestone3_progress` | Number 0-100 | `10` |
+| `milestone_title` | Name of the main goal | `Seeding Algorithm` |
+| `milestone_timeline` | Expected date | `2 Weeks` |
+| `milestone_progress` | Number 0-100 | `85` |
 | `cta_primary_label` | Button text | `Enter Arena` |
 | `cta_primary_href` | Button link | `https://...` |
+| `cta_primary_helper` | Helper text below button | `Compete in battles` |
 | `cta_secondary_label` | Second button text | `Learn More` |
 | `cta_secondary_href` | Second button link | `https://...` |
+| `cta_secondary_helper` | Helper text below button | `How it works` |
 
 ## 2. Publish to Web
 1. Open your sheet.

@@ -15,7 +15,7 @@ export interface Project {
   name: string;
   category: "Ecosystem" | "Platforms" | "Community";
   shortDescription: string;
-  milestones: Milestone[];
+  milestone: Milestone;
   ctas: {
     primary: CTA;
     secondary: CTA;

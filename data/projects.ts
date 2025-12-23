@@ -13,23 +13,11 @@ export const projects: Project[] = [
     category: "Platforms",
     shortDescription:
       "Battle-style music competition platform where artists compete for community votes.",
-    milestones: [
-      {
-        title: "Bracket Seeding Algorithm",
-        timeline: "2 Weeks",
-        progress: 85,
-      },
-      {
-        title: "Community Voting Mechanics",
-        timeline: "1 Month",
-        progress: 60,
-      },
-      {
-        title: "Season 2 Launch",
-        timeline: "Q1 2025",
-        progress: 20,
-      },
-    ],
+    milestone: {
+      title: "Bracket Seeding Algorithm",
+      timeline: "2 Weeks",
+      progress: 85,
+    },
     ctas: {
       primary: {
         label: "Enter Arena",
@@ -49,23 +37,11 @@ export const projects: Project[] = [
     category: "Ecosystem",
     shortDescription:
       "Decentralized governance and decision-making framework.",
-    milestones: [
-      {
-        title: "Governance Dashboard v1",
-        timeline: "3 Weeks",
-        progress: 75,
-      },
-      {
-        title: "Smart Contract Audit",
-        timeline: "1 Month",
-        progress: 40,
-      },
-      {
-        title: "Community DAO Vote",
-        timeline: "Q2 2025",
-        progress: 0,
-      },
-    ],
+    milestone: {
+      title: "Governance Dashboard v1",
+      timeline: "3 Weeks",
+      progress: 75,
+    },
     ctas: {
       primary: {
         label: "Governance",
@@ -85,23 +61,11 @@ export const projects: Project[] = [
     category: "Community",
     shortDescription:
       "IRL and virtual festival experiences connecting artists globally.",
-    milestones: [
-      {
-        title: "Venue Partnerships",
-        timeline: "Ongoing",
-        progress: 90,
-      },
-      {
-        title: "Artist Lineup curation",
-        timeline: "Feb 2025",
-        progress: 50,
-      },
-      {
-        title: "Ticket Sales Launch",
-        timeline: "Mar 2025",
-        progress: 10,
-      },
-    ],
+    milestone: {
+      title: "Venue Partnerships",
+      timeline: "Ongoing",
+      progress: 90,
+    },
     ctas: {
       primary: {
         label: "Get Updates",
@@ -121,23 +85,11 @@ export const projects: Project[] = [
     category: "Ecosystem",
     shortDescription:
       "Collectible artist cards unlocking exclusive content.",
-    milestones: [
-      {
-        title: "Metadata Standard",
-        timeline: "Done",
-        progress: 100,
-      },
-      {
-        title: "Public Minting UI",
-        timeline: "2 Weeks",
-        progress: 65,
-      },
-      {
-        title: "Marketplace Integration",
-        timeline: "Q2 2025",
-        progress: 25,
-      },
-    ],
+    milestone: {
+      title: "Metadata Standard",
+      timeline: "Done",
+      progress: 100,
+    },
     ctas: {
       primary: {
         label: "Collect",
@@ -157,23 +109,11 @@ export const projects: Project[] = [
     category: "Community",
     shortDescription:
       "Curated concert series for emerging independent artists.",
-    milestones: [
-      {
-        title: "Spring Season Booking",
-        timeline: "1 Month",
-        progress: 40,
-      },
-      {
-        title: "City Selection",
-        timeline: "2 Weeks",
-        progress: 80,
-      },
-      {
-        title: "Promo Campaign",
-        timeline: "Mar 2025",
-        progress: 15,
-      },
-    ],
+    milestone: {
+      title: "Spring Season Booking",
+      timeline: "1 Month",
+      progress: 40,
+    },
     ctas: {
       primary: {
         label: "Apply",
@@ -193,23 +133,11 @@ export const projects: Project[] = [
     category: "Community",
     shortDescription:
       "Weekly ecosystem updates and artist spotlights.",
-    milestones: [
-      {
-        title: "Subscriber Growth",
-        timeline: "Continuous",
-        progress: 78,
-      },
-      {
-        title: "Content Automation",
-        timeline: "1 Week",
-        progress: 90,
-      },
-      {
-        title: "Sponsorship Deck",
-        timeline: "Q1 2025",
-        progress: 30,
-      },
-    ],
+    milestone: {
+      title: "Subscriber Growth",
+      timeline: "Continuous",
+      progress: 78,
+    },
     ctas: {
       primary: {
         label: "Read",
@@ -229,23 +157,11 @@ export const projects: Project[] = [
     category: "Platforms",
     shortDescription:
       "Financial support for music education and equipment.",
-    milestones: [
-      {
-        title: "Eligibility Checker",
-        timeline: "3 Weeks",
-        progress: 55,
-      },
-      {
-        title: "Application Portal",
-        timeline: "1 Month",
-        progress: 40,
-      },
-      {
-        title: "Fundraising Round",
-        timeline: "Q2 2025",
-        progress: 10,
-      },
-    ],
+    milestone: {
+      title: "Eligibility Checker",
+      timeline: "3 Weeks",
+      progress: 55,
+    },
     ctas: {
       primary: {
         label: "Apply",
@@ -265,23 +181,11 @@ export const projects: Project[] = [
     category: "Ecosystem",
     shortDescription:
       "Unified event calendar for the ecosystem.",
-    milestones: [
-      {
-        title: "Google Cal Sync",
-        timeline: "1 Week",
-        progress: 85,
-      },
-      {
-        title: "Event Submission Form",
-        timeline: "2 Weeks",
-        progress: 60,
-      },
-      {
-        title: "Mobile Widget",
-        timeline: "1 Month",
-        progress: 20,
-      },
-    ],
+    milestone: {
+      title: "Google Cal Sync",
+      timeline: "1 Week",
+      progress: 85,
+    },
     ctas: {
       primary: {
         label: "View",
@@ -301,23 +205,11 @@ export const projects: Project[] = [
     category: "Community",
     shortDescription:
       "Educational series demystifying blockchain.",
-    milestones: [
-      {
-        title: "Episode 10 Production",
-        timeline: "This Week",
-        progress: 95,
-      },
-      {
-        title: "Guest Booking",
-        timeline: "Ongoing",
-        progress: 70,
-      },
-      {
-        title: "Interactive Quizzes",
-        timeline: "2 Months",
-        progress: 10,
-      },
-    ],
+    milestone: {
+      title: "Episode 10 Production",
+      timeline: "This Week",
+      progress: 95,
+    },
     ctas: {
       primary: {
         label: "Watch",
@@ -337,23 +229,11 @@ export const projects: Project[] = [
     category: "Platforms",
     shortDescription:
       "MIDI-powered creative tools for producers.",
-    milestones: [
-      {
-        title: "Core Audio Engine",
-        timeline: "1 Month",
-        progress: 40,
-      },
-      {
-        title: "VST3 Wrapper",
-        timeline: "2 Months",
-        progress: 20,
-      },
-      {
-        title: "UI Implementation",
-        timeline: "Q2 2025",
-        progress: 5,
-      },
-    ],
+    milestone: {
+      title: "Core Audio Engine",
+      timeline: "1 Month",
+      progress: 40,
+    },
     ctas: {
       primary: {
         label: "Beta Access",
