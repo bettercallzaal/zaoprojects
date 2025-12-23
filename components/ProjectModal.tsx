@@ -37,49 +37,27 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                         </h2>
                     </header>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                            <section>
-                                <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-3 font-bold">About</h4>
-                                <p className="text-zao-text/90 leading-relaxed text-sm">
-                                    {project.shortDescription} This project is a core component of the ZAO ecosystem, focused on empowering independent artists through decentralized technology and community-driven platforms.
-                                </p>
-                            </section>
+                    <div className="space-y-8">
+                        <section>
+                            <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-3 font-bold">About</h4>
+                            <p className="text-zao-text/90 leading-relaxed text-sm">
+                                {project.shortDescription}
+                            </p>
+                        </section>
 
-                            <section>
-                                <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-3 font-bold">Team & Resources</h4>
+                        <section>
+                            <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-4 font-bold">Main Goal</h4>
+                            <div className="space-y-6">
                                 <div className="space-y-2">
-                                    <a href="#" className="flex items-center gap-2 text-xs text-zao-accent hover:underline">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-zao-accent" />
-                                        Technical Documentation
-                                    </a>
-                                    <a href="#" className="flex items-center gap-2 text-xs text-zao-accent hover:underline">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-zao-accent" />
-                                        GitHub Repository
-                                    </a>
-                                    <a href="#" className="flex items-center gap-2 text-xs text-zao-accent hover:underline">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-zao-accent" />
-                                        Ecosystem Discussions
-                                    </a>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div className="space-y-6">
-                            <section>
-                                <h4 className="text-xs uppercase tracking-widest text-zao-muted mb-4 font-bold">Main Goal</h4>
-                                <div className="space-y-6">
-                                    <div className="space-y-2">
-                                        <div className="flex justify-between items-end text-[10px] uppercase tracking-wider font-semibold">
-                                            <span className="text-zao-text">{project.milestone.title}</span>
-                                            <span className="text-zao-secondary font-orbitron">{project.milestone.progress}%</span>
-                                        </div>
-                                        <TechProgressBar progress={project.milestone.progress} totalSegments={15} variant="primary" />
-                                        <p className="text-[10px] text-zao-muted italic">Timeline: {project.milestone.timeline}</p>
+                                    <div className="flex justify-between items-end text-[10px] uppercase tracking-wider font-semibold">
+                                        <span className="text-zao-text">{project.milestone.title}</span>
+                                        <span className="text-zao-secondary font-orbitron">{project.milestone.progress}%</span>
                                     </div>
+                                    <TechProgressBar progress={project.milestone.progress} totalSegments={15} variant="primary" />
+                                    <p className="text-[10px] text-zao-muted italic">Timeline: {project.milestone.timeline}</p>
                                 </div>
-                            </section>
-                        </div>
+                            </div>
+                        </section>
                     </div>
 
                     <footer className="pt-6 border-t border-zao-border/30 flex justify-between items-center">
