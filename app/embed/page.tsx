@@ -24,7 +24,7 @@ export default async function EmbedPage({
     const category = searchParams.category || "All";
     const cols = searchParams.cols ? parseInt(searchParams.cols) : 1;
     const showBranding = searchParams.branding !== "false";
-    const showDeepDive = searchParams.deepdive === "true"; // Default to false now
+    const showDeepDive = searchParams.deepdive !== "false"; // Default to true now
 
     // Theme logic
     let primaryColor = "#e0ddaa"; // Default to ZAO Yellow for branding consistency

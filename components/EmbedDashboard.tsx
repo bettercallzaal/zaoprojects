@@ -14,7 +14,7 @@ interface EmbedDashboardProps {
     showDeepDive?: boolean;
 }
 
-export function EmbedDashboard({ projects, cols, showBranding, primaryColor, showDeepDive = false }: EmbedDashboardProps) {
+export function EmbedDashboard({ projects, cols, showBranding, primaryColor, showDeepDive = true }: EmbedDashboardProps) {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (

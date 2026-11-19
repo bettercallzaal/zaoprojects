@@ -50,7 +50,7 @@ The widget is pre-configured with the **Official ZAO Theme** (Blue/Yellow). You 
 | `cols` | `1` | `?cols=2` | Grid columns (works best for wide layouts). |
 | `category` | `All` | `?category=Platforms` | Filter by specific ecosystem sector. |
 | `bg` | `#050b14` | `?bg=000000` | Custom background hex. Use `&bg=none` for transparent. |
-| `deepdive` | `false` | `?deepdive=true` | Shows the high-detail "Details" button. |
+| `deepdive` | `true` | `?deepdive=false` | Shows the high-detail "Details" button. |
 
 ### 🛠️ Example Custom URL:
 `https://zaoprojects.vercel.app/embed?cols=2&bg=none&deepdive=true`
